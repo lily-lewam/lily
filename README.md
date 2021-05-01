@@ -35,21 +35,21 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
     Metricbeat is a lightweight shipper that you can install on your servers to periodically collect metrics from the operating system and from services running on the server. 
 Metricbeat Takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
-    The configuration details of each machine may be found below .
-    +----------+----------+------------+-------------------+
+                   The configuration details of each machine may be found below.                                                             
+                     +----------+----------+------------+-------------------+
+                     | Name     | Function | IP Address | Operating System  |
+                     +----------+----------+------------+-------------------+
+                     | Jump box | Gateway  | 10.0.0.4   | Linux             |
+                     +----------+----------+------------+-------------------+
+                     | VM 1     | VM       | 10.0.0.9   | Linux             |
+                     +----------+----------+------------+-------------------+
+                     | VM 2     | VM       | 10.0.0.8   | Linux             |
+                     +----------+----------+------------+-------------------+
+                     | VM 3     | VM       | 10.0.0.5   | Linux             |
+                     +----------+----------+------------+-------------------+
+                     | ELK      | ELKstack | 10.2.0.4   | Linux             |
+                     +----------+----------+------------+-------------------+
 
-| Name     | Function | IP Address | Operating System  |
-+----------+----------+------------+-------------------+
-| Jump box | Gateway  | 10.0.0.4   | Linux             |
-+----------+----------+------------+-------------------+
-| VM 1     | VM       | 10.0.0.9   | Linux             |
-+----------+----------+------------+-------------------+
-| VM 2     | VM       | 10.0.0.8   | Linux             |
-+----------+----------+------------+-------------------+
-| VM 3     | VM       | 10.0.0.5   | Linux             |
-+----------+----------+------------+-------------------+
-| ELK      | ELKstack | 10.2.0.4   | Linux             |
-+----------+----------+------------+-------------------+
 
 
      
