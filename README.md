@@ -102,7 +102,8 @@ Install the elk container and run ansible-playbook install-elk.yml
 
 
 
-![Uploading Screen Shot 2021-05-01 at 7.02.43 PM.png…]()
+<img width="1198" alt="Screen Shot 2021-05-01 at 7 02 43 PM" src="https://user-images.githubusercontent.com/79333560/116799763-2401dd00-aab0-11eb-9371-fff632423c68.png">
+
 
 
  
