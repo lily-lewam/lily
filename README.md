@@ -13,39 +13,11 @@ Cybersecurity Project 1
 
 
 These files have been tested and used to generate a live ELK deployment on Azure.They can be used to either recreate the entire deployment pictured above. Alternatively, a select portion of the playbook file may be used to install only certain pieces of it ,such as filebeat. 
-   ---
+  
    
-- name: install activity 1 modules
-  hosts: webservers
-  become: true
-  tasks:
 
-  - name: install dockerio
-    apt:
-      name: docker.io
-      state: present
-
-  - name: install python3
-    apt:
-     name: python3-pip
-     state: present
-
-  - name: install docker
-    pip:
-      name: docker
-      state: present
-
-  - name: install dvwa
-    docker_container:
-                   name: dvwa
-                   image: cyberxsecurity/dvwa
-                   state: started
-                   published_ports: 80:80
-
-  - name: enable docker service
-    systemd:
-          name: docker
-          enabled: yes
+  
+<img width="322" alt="Screen Shot 2021-05-01 at 6 35 48 PM" src="https://user-images.githubusercontent.com/79333560/116799211-1a767600-aaac-11eb-883a-cbc79fb9690d.png">
    
     This documents contains the following details :
 Description of the Topology
