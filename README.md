@@ -141,6 +141,7 @@ Which file do you update to make Ansible run the playbook on a specific machine?
 How do i specify which machine  to install the ELK server on versus which to install filebeat on ?
     The Host file allows under webservers Web 1,2 and 3 create under the same web servers.
    And create for ELK a separate under elk .
+   
            [webservers]
            
       10.0.0.9 ansible_python_interpreter=/usr/bin/python3
