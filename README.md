@@ -87,13 +87,13 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 What is the main advantage of automating configuration with Ansible?
 It is very simple to set up and used for creating the playbooks in YAML.
 
-The playbook implements the following tasks:
-Increasing the memory of the machine 
-Create a yml file
-Install Docker.io
-Install Python3
-Install docker
-Install the elk container and run ansible-playbook install-elk.yml
+     The playbook implements the following tasks:
+     Increasing the memory of the machine 
+     Create a yml file
+     Install Docker.io
+     Install Python3
+     Install docker
+     Install the elk container and run ansible-playbook install-elk.yml
 
 
 
