@@ -142,11 +142,12 @@ How do i specify which machine  to install the ELK server on versus which to ins
     The Host file allows under webservers Web 1,2 and 3 create under the same web servers.
    And create for ELK a separate under elk .
            [webservers]
+           
       10.0.0.9 ansible_python_interpreter=/usr/bin/python3
       
-      12.0.0.8 ansible_python_interpreter=/usr/bin/python3
+      10.0.0.8 ansible_python_interpreter=/usr/bin/python3
       
-      14.0.0.5 ansible_python_interpreter=/usr/bin/python3
+      10.0.0.5 ansible_python_interpreter=/usr/bin/python3
 
             [elk]
         10.2.0.4 ansible_python_interpreter=/usr/bin/python3
