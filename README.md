@@ -13,7 +13,38 @@ Cybersecurity Project 1
 
 
 These files have been tested and used to generate a live ELK deployment on Azure.They can be used to either recreate the entire deployment pictured above. Alternatively, a select portion of the playbook file may be used to install only certain pieces of it ,such as filebeat. 
-   Image install-elk.yml
+   ---
+- name: install activity 1 modules
+  hosts: webservers
+  become: true
+  tasks:
+
+  - name: install dockerio
+    apt:
+      name: docker.io
+      state: present
+
+  - name: install python3
+    apt:
+     name: python3-pip
+     state: present
+
+  - name: install docker
+    pip:
+      name: docker
+      state: present
+
+  - name: install dvwa
+    docker_container:
+                   name: dvwa
+                   image: cyberxsecurity/dvwa
+                   state: started
+                   published_ports: 80:80
+
+  - name: enable docker service
+    systemd:
+          name: docker
+          enabled: yes
    
     This documents contains the following details :
 Description of the Topology
@@ -121,16 +152,34 @@ Which file is the playbook? Where do you copy it?
 Which file do you update to make Ansible run the playbook on a specific machine? The Host file
 
 How do i specify which machine  to install the ELK server on versus which to install filebeat on ?
-    The Host file allows under web servers  for Web 1 to 3 create under the same web servers.
-   And create for ELK a separate for elk under all the Web server.
+    The Host file allows under webservers Web 1,2 and 3 create under the same web servers.
+   And create for ELK a separate under elk .
+   [webservers]
+10.0.0.9 ansible_python_interpreter=/usr/bin/python3
+10.0.0.8 ansible_python_interpreter=/usr/bin/python3
+10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+
+[elk]
+10.2.0.4 ansible_python_interpreter=/usr/bin/python3
+
+   
 Which URL do you navigate to in order to check that the ELK server is running? 
   http:// ip :5601/app/kibana
 
      Bonus, provide the specific commands the user will need to run to download the playbook, update the files, etc
 
-/etc/ansible/ ansible-playbook filebeat-playbook.yml
-/etc/ansible/roles ansible-playbook install-elk.yml
-/etc/ansible/ ansible-playbook filebeatconfig.yml
+            /etc/ansible/roles ansible-playbook filebeat-playbook.yml
+           
+            /etc/ansible/ ansible-playbook install-elk.yml
+            
+           /etc/ansible/files  ansible-playbook filebeatconfig.yml
+           
+           /etc/ansible/ playbook-hosts
+           
+           /etc/ansible ansible-playbook my-playbook
+           
+           /etc/ansible ansible-playbook ansible.cfg
+           
 
                 
 
