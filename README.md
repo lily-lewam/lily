@@ -97,7 +97,8 @@ It is very simple to set up and used for creating the playbooks in YAML.
 
                  Image install-elk.yml
                  
-                 <img width="827" alt="Screen Shot 2021-05-01 at 7 50 52 PM" src="https://user-images.githubusercontent.com/79333560/116800533-d9379380-aab6-11eb-8e33-9ec06579ef3b.png">
+<img width="827" alt="Screen Shot 2021-05-01 at 7 50 52 PM" src="https://user-images.githubusercontent.com/79333560/116800593-74306d80-aab7-11eb-81cf-7e1465a5cfa7.png">
+                 
 
 
 
