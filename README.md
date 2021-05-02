@@ -17,7 +17,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
    
 
   
-<img width="322" alt="Screen Shot 2021-05-01 at 6 35 48 PM" src="https://user-images.githubusercontent.com/79333560/116799211-1a767600-aaac-11eb-883a-cbc79fb9690d.png">
+<img width="735" alt="Screen Shot 2021-05-01 at 6 41 27 PM" src="https://user-images.githubusercontent.com/79333560/116799286-de8fe080-aaac-11eb-8c5b-41158461a41d.png">
+
    
     This documents contains the following details :
 Description of the Topology
