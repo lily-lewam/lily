@@ -116,7 +116,7 @@ It is very simple to set up and used for creating the playbooks in YAML.
 
 
  
-Image install-elk.yml 
+ 
 
 Target Machines and Beats
 
