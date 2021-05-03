@@ -129,7 +129,7 @@ We have installed the following Beats on these machines:
 Filebeats and Metricbeats were installed .
 
                      Filebeats collects and forwards data from the file system and sends the information to the ELK stack server for processing. We can view the information through kibana charts and tables.
-         Metricbeats 
+         Metricbeats takes the metrics and statistics that collects from operating system and ships them to the output that you specify ,such as Elasticsearch or logstach.
 
              Using the playbook 
  In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have sudh a control node provisioned.
@@ -164,7 +164,7 @@ How do i specify which machine  to install the ELK server on versus which to ins
 
    
 Which URL do you navigate to in order to check that the ELK server is running? 
-  http:// ip :5601/app/kibana
+  http:// my VM ip :5601/app/kibana
 
      Bonus, provide the specific commands the user will need to run to download the playbook, update the files, etc
 
@@ -174,12 +174,40 @@ Which URL do you navigate to in order to check that the ELK server is running?
             
            /etc/ansible/files  ansible-playbook filebeatconfig.yml
            
-           /etc/ansible/ playbook-hosts
-           
            /etc/ansible ansible-playbook my-playbook
            
            /etc/ansible ansible-playbook ansible.cfg
            
+                  
+                  
+       - Command to connect Jump-Box is ssh azadmin@104.41.143.57 ( username@VM-Public-IP)
+       - once you are conncetd check sudo permission ( RUN sudo-l ) sudo permission without requiring a password .
 
+              To configure your jump box to run Docker containers and to install a container.
+              
+            - TO install docker.io on your Jump box 
+                RUN:- sudo apt update
+                THEN RUN :- sudo apt install docker.io
+            - Verify that the Docker service is running
+                sudo systemctl status docker
+                
+            Once Docker is installed, pull the container cyberxsecurity/ansible
+               Run sudo docker pull cyberxsecurity/ansible
+               Run sudo su to switch to root 
+               Run docker run -ti cyberxsecurity/ansible:latest bash to start the container
+               Run exit to quit .
+               
+             - To see the name of your container RUN command sudo (docker container list -a)
+             - To Check for your Ansible container command (sudo docker ps)
+             - To to start container RUN command (sudo start name of your conatiner) 
+             - To Connect the Ansible container (sudo attach container name )
+             - To change to ansible directory RUN (cd /etc/ansible)
+             
+             - To connect to ELK ssh azadmin@10.2.0.4 (RUN username@ELK-private-ip)
+  
+                
+              
+        
+      
                 
 
